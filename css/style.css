@@ -1,0 +1,147 @@
+
+:root {
+    font-family: 'Lora', 'Times New Romain', sans-serif;
+    font-size: 20px;
+    line-height: 0.5in
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+p {
+    line-height: 1.5em;
+}
+
+blockquote {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    color: #777;
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+a:hover,
+a:focus {
+    color: #0085a1;
+}
+
+a img:hover,
+a img:focus {
+    cursor: pointer;
+}
+
+figcaption {
+    display: flex;
+    justify-content: center;
+}
+
+#breadcrumb {
+    background: no-repeat center center;
+    background-attachment: scroll;
+    background-image: url("../img/background.jpg");
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    margin-bottom: 40px;
+}
+
+#breadcrumb .sub-heading h1 {
+    font-size: 22px;
+    font-weight: 300;
+    text-align: center;
+    color: #f1f1f1;
+    text-transform: uppercase;
+
+}
+
+.title .sub-title {
+    margin: 10px 0 30px;
+}
+
+.title .meta {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.sec-heading {
+    margin-top: 60px;
+}
+
+.description {
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+    margin: 0;
+    display: block;
+
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.responsive img {
+    width: 100%;
+}
+
+footer {
+    padding: 50px 0 65px;
+}
+
+footer .copyright {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+
+header,
+article  {
+    display: grid;
+    grid-template-columns: 1fr 0.5in [start] 1.25in 5in 1.25in [end] 0.5in 1fr;
+}
+
+header *,
+article * {
+    grid-column: start / end;
+}
+
+@media (max-width: 11.5in) {
+    :root { font-size: 18px; }
+
+    article {
+        grid-template-columns: 1fr 5% [start] 15% 60% 15% [end] 5% 1fr;
+    }
+}
+
+@media (max-width: 8.5in) {
+    :root { font-size: 16px; }
+
+    .sub-heading {
+        display: none;
+    }
+}
+
+
