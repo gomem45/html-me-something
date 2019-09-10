@@ -1,30 +1,40 @@
 
+/* root element that reprents HTML tag, the
+   difference is :root all will allow all the
+   other elements to inherit font properties  */
 :root {
     font-family: 'Lora', 'Times New Romain', sans-serif;
     font-size: 20px;
     line-height: 0.5in
 }
 
+/* rem values based on the size of
+   font size in pixes */
+
+/* heading for article title  */
 h1 {
     font-size: 2.2rem;
     font-weight: 800;
 }
 
+/* heading for second heading */
 h2 {
     font-size: 1.4rem;
     font-weight: 700;
 }
 
+/* heading for article sub title */
 h3 {
     font-size: 1rem;
     font-weight: 600;
 }
 
-
+/* paragraphs default spacing inline */
 p {
     line-height: 1.5em;
 }
 
+/* standalone quote after paragraph */
 blockquote {
     font-size: 1rem;
     line-height: 1.3rem;
@@ -32,30 +42,38 @@ blockquote {
     font-style: italic;
 }
 
+/* links default format */
 a {
     text-decoration: none;
     color: #333;
 }
 
+/* Styling font for headings */
 h1, h2, h3 {
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
+/* State when User mouseover a link or
+   State when User clicks on a link */
 a:hover,
 a:focus {
     color: #0085a1;
 }
 
+/* State when User mouseover on an image or
+   State when User clicks on an image */
 a img:hover,
 a img:focus {
     cursor: pointer;
 }
 
+/* Text displayed after image display */
 figcaption {
     display: flex;
     justify-content: center;
 }
 
+/* Area to display Web page map link */
 #breadcrumb {
     background: no-repeat center center;
     background-attachment: scroll;
@@ -68,6 +86,7 @@ figcaption {
     margin-bottom: 40px;
 }
 
+/* Style for heading inside breadcrumb */
 #breadcrumb .sub-heading h1 {
     font-size: 22px;
     font-weight: 300;
@@ -77,20 +96,26 @@ figcaption {
 
 }
 
+/* Spacing outside the sub title, but
+   inside the title div tag */
 .title .sub-title {
     margin: 10px 0 30px;
 }
 
+/* Style for meta tags */
 .title .meta {
     font-style: italic;
     font-weight: 300;
     font-size: 20px;
 }
 
+/* Space between last paragraph 
+   before the second heading */
 .sec-heading {
     margin-top: 60px;
 }
 
+/* Style for the figcaption text */
 .description {
     text-align: center;
     font-size: 14px;
@@ -102,20 +127,33 @@ figcaption {
     border-bottom-left-radius: 5px;
 }
 
+/* Image will always resize according
+   to the screen size */
 .responsive img {
     width: 100%;
 }
 
+/* Spacing inside the footer section */
 footer {
     padding: 50px 0 65px;
 }
 
+/* Style for copyright year */
 footer .copyright {
     font-size: 14px;
     text-align: center;
     margin-bottom: 0;
 }
 
+/* IMPORTANT */
+
+/* CSS Grid is divided among 3 columns */
+/* 1 fraction means each column now takes the space of 1/3 of total width.
+   Since hard coding the fraction size would not equal 100%. fr units are used*/  
+
+/* Apply same fixed with for 1fr and 3fr, this is because this is the whitespace 
+   margin, then set a start endpoint to divide content display in the center no 
+   matter the length of text, after, set the endpoint*/
 
 header,
 article  {
@@ -123,11 +161,16 @@ article  {
     grid-template-columns: 1fr 0.5in [start] 1.25in 5in 1.25in [end] 0.5in 1fr;
 }
 
+/* Article responsive display */
 header *,
 article * {
     grid-column: start / end;
 }
 
+/* Article content resizes until a maximum with of 11 
+   inches. Other size units are not compatible with fr */
+
+/* Medium size of screen */
 @media (max-width: 11.5in) {
     :root { font-size: 18px; }
 
@@ -136,6 +179,7 @@ article * {
     }
 }
 
+/* Small size of screen  */
 @media (max-width: 8.5in) {
     :root { font-size: 16px; }
 
